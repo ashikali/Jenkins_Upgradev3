@@ -12,10 +12,17 @@ pipeline {
                    }
             }
 	}
-	 stage('Deploy in Staging Environment'){
+	stage('Deploy in Staging Environment'){
+
             steps{
                 build job: 'Deploy Application to Staging Environment'
+            }
+         
+        }
+	stage('Deploy in Production Environment'){
 
+            steps{
+                build job: 'Deploy Application to Pro Environment'
             }
          
         }
