@@ -16,6 +16,8 @@ pipeline {
 
             steps{
                 build job: 'Deploy Application to Staging Environment'
+	    }
+	    steps{
                 build job: 'Deploy Application to Pro Environment'
             }
          
